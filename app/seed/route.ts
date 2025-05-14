@@ -158,6 +158,3 @@ export async function GET() {
     );
   }
 }
-
-// Optionally, add a runtime configuration to mark the route as dynamic
-export const dynamic = "force-dynamic";
