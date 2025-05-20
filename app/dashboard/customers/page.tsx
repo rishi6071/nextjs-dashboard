@@ -1,8 +1,13 @@
 import { Suspense } from "react";
+import { Metadata } from "next";
 import CustomersTable from "@/app/ui/customers/table";
 import { CustomersTableSkeleton } from "@/app/ui/skeletons";
 import Search from "@/app/ui/search";
 import { lusitana } from "@/app/ui/fonts";
+
+export const metadata: Metadata = {
+  title: 'Customers',
+};
 
 export default async function Page(props: {
   searchParams: Promise<{ query?: string }>;
