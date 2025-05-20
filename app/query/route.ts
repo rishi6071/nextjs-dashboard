@@ -30,10 +30,10 @@ export async function GET() {
       return await listInvoices();
     });
     return NextResponse.json(invoices);
-  } catch (error) {
+  } catch (error: any) {
     console.error("Error in GET handler:", error);
     return NextResponse.json(
-      { error: error || "Internal Server Error" },
+      { error: error.message || "Internal Server Error" },
       { status: 500 }
     );
   }
